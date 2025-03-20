@@ -17,6 +17,7 @@ class BookingService {
             
             const flightdata = response.data.data
             const priceOfTheFlight = flightdata.price;
+            
             if(data.noOfSeats>flightdata.totalSeats) {
                 throw new ServiceError("Number of seats is more than available seats","Insuffecient seats");
             }
@@ -139,4 +140,4 @@ class BookingService {
     }
 }
 
-module.exports =BookingService
+module.exports = BookingService
